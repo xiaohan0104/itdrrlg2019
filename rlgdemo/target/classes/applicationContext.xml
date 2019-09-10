@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!--开启注释只扫业务层-->
+    <!--<context:component-scan base-package="com.itdr">-->
+        <!--<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+    <!--</context:component-scan>-->
+
+    <!--加载数据库配置文件-->
+    <!--<context:property-placeholder location="classpath:db.properties"/>-->
+    <!--&lt;!&ndash;配置c3po连接池&ndash;&gt;-->
+    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">-->
+        <!--<property name="DriverClass" value="${DriverClass}"/>-->
+        <!--<property name="jdbcUrl" value="${jdbcUrl}"/>-->
+        <!--<property name="User" value="${User}"/>-->
+        <!--<property name="Password" value="${Password}"/>-->
+    <!--</bean>-->
+    <!-- 配置SqlSessionFactory工厂 -->
+    <!--<bean class="org.mybatis.spring.SqlSessionFactoryBean">-->
+        <!--<property name="configLocation" value="classpath:SplMaoConfig.xml"/>-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+    <!-- Mapper代理的方式开发方式二，扫描包方式配置代理 -->
+    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+        <!--&lt;!&ndash; 配置Mapper接口 &ndash;&gt;-->
+        <!--<property name="basePackage" value="com.itdr.dao"/>-->
+    <!--</bean>-->
+<bean id="aa" class="com.itdr.qqqqq.A" >
+    <property name="awf" value="b"/>
+</bean>
+    <bean id="B" class="com.itdr.qqqqq.B" parent="aa">
+
+    </bean>
+</beans>
