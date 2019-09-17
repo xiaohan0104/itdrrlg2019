@@ -17,5 +17,6 @@ public interface UserService {
 
     ServiceResponse<Users> forgetGetQuestion(String username);
 
+    //提交问题答案
     ServiceResponse<Users> forgetCheckAnswer(String username, String question, String answer);
 }

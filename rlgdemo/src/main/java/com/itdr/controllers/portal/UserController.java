@@ -1,4 +1,4 @@
-package com.itdr.controllers;
+package com.itdr.controllers.portal;
 
 
 import com.itdr.common.Const;
