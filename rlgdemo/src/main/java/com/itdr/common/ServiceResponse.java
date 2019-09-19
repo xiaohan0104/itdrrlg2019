@@ -68,4 +68,5 @@ public class ServiceResponse<T> implements Serializable {
     public boolean issuccerd(){
         return status == 200;
     }
+    
 }

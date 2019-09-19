@@ -130,7 +130,7 @@ public class UserServiceImpl implements UserService {
     public ServiceResponse<Users> forgetGetQuestion(String username) {
 
         if (username == null || username.equals("")) {
-            return ServiceResponse.defeadetRs("用户名buneng 为空");
+            return ServiceResponse.defeadetRs("用户名不能为空");
         }
         int i = usersMapper.selectByUsernameOrEmail(username, Const.USERNAME);
 
