@@ -1,6 +1,7 @@
 package com.itdr.mappers;
 
 import com.itdr.pojo.Shipping;
+import org.apache.ibatis.annotations.Param;
 
 public interface ShippingMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +15,6 @@ public interface ShippingMapper {
     int updateByPrimaryKeySelective(Shipping record);
 
     int updateByPrimaryKey(Shipping record);
+
+    Shipping selectByIdAndUid(@Param("shippingid") Integer shippingid,@Param("uid") Integer uid);
 }

@@ -10,7 +10,7 @@ import com.itdr.pojo.Product;
 import com.itdr.pojo.Users;
 import com.itdr.pojo.vo.ProductVO;
 import com.itdr.services.ProductService;
-import com.itdr.util.PoToVoUtils;
+import com.itdr.util.PoToVoUtilsO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,7 +53,7 @@ public class ProductServiceImpl implements ProductService {
             return ServiceResponse.defeadetRs("商品不存在");
         }
 
-        ProductVO productVO = PoToVoUtils.productVOTovo(product);
+        ProductVO productVO = PoToVoUtilsO.productVOTovo(product);
         return ServiceResponse.successRs(productVO);
     }
 

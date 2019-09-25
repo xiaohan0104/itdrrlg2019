@@ -1,6 +1,7 @@
 package com.itdr.mappers;
 
 import com.itdr.pojo.Orders;
+import org.apache.ibatis.annotations.Param;
 
 public interface OrdersMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +15,8 @@ public interface OrdersMapper {
     int updateByPrimaryKeySelective(Orders record);
 
     int updateByPrimaryKey(Orders record);
+//出巡订单是否存在
+    Orders selectByOrderNo(Long orderno);
+//    根据订单和用户id查询
+    int selectByOrderNoAndUid(@Param("orderno") Long orderno, @Param("id") Integer id);
 }

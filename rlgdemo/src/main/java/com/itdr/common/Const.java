@@ -10,6 +10,12 @@ public class Const {
     public static final String USERNAME = "username";
     public static final String LOGOUT = "退出成功";
     public static final String NOEONR = "没有该用户";
+    public static final String FEIFACANSHU  = "非法参数";
+    public static final String LIMTQUANTYSUCCESS  = "LIMT_NUM_SUCCESS";
+    public static final String LIMTQUANTYFATLED  = "LIMT_NUM_FATLED";
+    public static final String NOTHING = "不存在";
+
+
     /*
     * 成功时通用状态码*/
     public static final int SUCESS=200;
@@ -18,6 +24,9 @@ public class Const {
      * 失败时通用状态码
      * */
     public static final int ERROR=100;
+//    是否选中
+    public static final int UNCHECK=0;
+    public static final int CHECK=1;
 
     public enum UsersEnum{
         NEED_LOGIN(2,"需要登陆"),

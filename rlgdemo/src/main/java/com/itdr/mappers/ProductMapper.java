@@ -32,4 +32,8 @@ public interface ProductMapper {
                           @Param("keyWord")String keyWord,
                           @Param("col")String col,
                           @Param("order")String order);
+//根据shangpinid获取商品信息
+    Product selectByProductId(Integer productId);
+
+    int updateById(Product product);
 }
