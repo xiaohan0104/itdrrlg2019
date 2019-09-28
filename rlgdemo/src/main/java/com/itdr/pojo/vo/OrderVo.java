@@ -32,6 +32,16 @@ private List<OrderItemVo> orderItemVos;
 
 private ShippingVo shippingVo;
 
+private String imageHost;
+
+    public String getImageHost() {
+        return imageHost;
+    }
+
+    public void setImageHost(String imageHost) {
+        this.imageHost = imageHost;
+    }
+
     public Long getOrderNo() {
         return orderNo;
     }

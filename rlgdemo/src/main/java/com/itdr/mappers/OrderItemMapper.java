@@ -1,6 +1,7 @@
 package com.itdr.mappers;
 
 import com.itdr.pojo.OrderItem;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -22,5 +23,5 @@ public interface OrderItemMapper {
 
     int insertAll(List<OrderItem> orderItem);
     //用户id和订单号获取订单详情
-    List<OrderItem> selectByOrderNoAndUid(Long orderNo, Integer uid);
+    List<OrderItem> selectByOrderNoAndUid(@Param("uid") Integer uid,@Param("orderNo") Long orderNo);
 }

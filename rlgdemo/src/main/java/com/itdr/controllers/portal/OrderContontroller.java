@@ -41,4 +41,29 @@ public class OrderContontroller {
         }
         return orderService.getOrderItems(users.getId(),orderNo);
     }
+
+    //获取永远忽订单列表
+    @RequestMapping("list_order.do")
+    public ServiceResponse listOrder(HttpSession session,
+                                         @RequestParam (value = "pageSize" ,required = false,defaultValue = "10") Integer pageSize,
+                                         @RequestParam (value = "pageNum" ,required = false,defaultValue = "1") Integer pageNum){
+        Users users = (Users) session.getAttribute(Const.LOGINUSER);
+
+        if (users == null){
+            return ServiceResponse.defeadetRs(Const.UsersEnum.ON_LOGIN.getCode(),Const.UsersEnum.ON_LOGIN.getDesc());
+        }
+        return orderService.listOrder(users.getId(),pageSize,pageNum);
+    }
+    //
+//    取消订单
+    @RequestMapping("counterment_order.do")
+    public ServiceResponse countermentOrder(HttpSession session,
+                                   Long orderN0){
+        Users users = (Users) session.getAttribute(Const.LOGINUSER);
+
+        if (users == null){
+            return ServiceResponse.defeadetRs(Const.UsersEnum.ON_LOGIN.getCode(),Const.UsersEnum.ON_LOGIN.getDesc());
+        }
+        return orderService.countermentOrder(users.getId(),orderN0);
+    }
 }

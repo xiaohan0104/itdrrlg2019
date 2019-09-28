@@ -36,4 +36,6 @@ public interface ProductMapper {
     Product selectByProductId(Integer productId);
 
     int updateById(Product product);
+
+
 }

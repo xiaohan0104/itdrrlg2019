@@ -32,6 +32,16 @@ public class Orders {
 
     private Date updateTime;
 
+    private String imageHost;
+
+    public String getImageHost() {
+        return imageHost;
+    }
+
+    public void setImageHost(String imageHost) {
+        this.imageHost = imageHost;
+    }
+
     public Integer getId() {
         return id;
     }
